@@ -11,6 +11,10 @@ if ( ! class_exists( 'KGN_Category' ) ) {
 
                 $category = get_queried_object();
 
+                if ( ! $category || ! isset( $category->term_id ) ) {
+                    return;
+                }
+
                 $posts_count = (int) get_field( 'category__posts_count', 'term_' . $category->term_id );
 
                 $posts_count = $posts_count > 0 ? $posts_count : 51;

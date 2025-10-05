@@ -31,6 +31,7 @@ document.addEventListener('DOMContentLoaded', () => {
     form.append('action', 'kgn_load_more');
     form.append('query', load_more_params.posts);
     form.append('page', load_more_params.current_page);
+    form.append('nonce', load_more_params.nonce);
 
     fetch(load_more_params.ajax_url, {
       method: 'POST',

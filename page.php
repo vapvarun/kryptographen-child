@@ -25,7 +25,7 @@ get_header();
             </div>
         </section>
         <div class="container page-info">
-            <h1 class="mb-10"><?php the_title()?></h1>
+            <h1 class="mb-10"><?php echo esc_html( get_the_title() ); ?></h1>
 			<?php
 			if ( have_posts() ) :
 				while ( have_posts() ) : the_post();
