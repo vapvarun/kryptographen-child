@@ -1,0 +1,17 @@
+.kgn_load_more {
+    text-align: center;
+    padding: 10px;
+    width: 300px;
+    max-width: 90%;
+    margin: 40px auto;
+    border: 1px solid #555;
+    cursor: pointer;
+    font-size: 14px;
+    transition: all 0.2s ease-in;
+}
+
+.kgn_load_more:hover {
+    background-color: #35b782;
+    border: 1px solid #35b782;
+    color: white;
+}

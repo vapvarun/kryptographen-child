@@ -1,0 +1,27 @@
+.table-of-contents {
+    margin: 0 0 60px;
+}
+
+.table-of-contents__list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.table-of-contents__list li {
+    margin: 0 0 10px;
+}
+
+.table-of-contents__list li a {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 160%;
+    text-decoration: none;
+}
+
+.table-of-contents > ul.table-of-contents__list > li:before {
+    top: calc(50% - 3px);
+    height: 6px;
+    
+}
+

@@ -1,0 +1,28 @@
+.info-label {
+    position: relative;
+}
+
+.info-label::before {
+    position: absolute;
+    content: 'Annonse';
+    right: 10px;
+    top: 10px;
+    background-color: #FFFFFF;
+    font-size: 16px;
+    padding: 2px 4px;
+    line-height: 1;
+    font-weight: 300;
+    border-radius: 2px;
+    z-index: 999;
+}
+
+.thumbnail-img > .info-label::before {
+    right: 20px;
+    top: 20px;
+}
+
+@media (min-width: 768px) {
+    .info-label::before {
+        font-size: 18px;
+    }
+}

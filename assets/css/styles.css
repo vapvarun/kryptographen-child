@@ -1,0 +1,118 @@
+.latest--about .latest-item-description > p {
+    color: #ffffff !important;
+}
+
+.latest--about h2 {
+    color: #ffffff;
+}
+
+.article-block .container div div h3 {
+    font-size: 22px;
+}
+
+.article-block h4 {
+    font-size: 20px;
+    margin-bottom: 20px;
+    font-weight: 700;
+}
+
+.article-block .guider-blocks-text ol {
+    margin-bottom: 20px;
+}
+
+.article-block .container .guider-blocks-text ol > li::before {
+    top: 3px;
+}
+
+.page-info .hero__slider-item-header {
+    .hero__slider-item-author {
+        color: #595C5C;
+    }
+    .hero__slider-item-author:after {
+        background-color: #595C5C;
+    }
+    .hero__slider-item-date {
+        color: #595C5C;
+    }
+}
+
+.article-no-image {
+    margin-top: 0px !important;
+}
+
+.article-container {
+    width: 100% !important;
+    max-width: 895px !important;
+    padding: 40px 15px 40px 15px !important;
+}
+
+.article-info {
+    padding-top: 40px !important;
+    margin-top: 0px !important;
+    h3,h2 {
+        margin-top: 20px;
+        margin-bottom: 25px;
+        font-size: 22px;
+    }
+    .has-background {
+        margin-top: 20px;
+        margin-bottom: 25px;
+    }
+    p {
+        margin-bottom: 25px;
+    }
+}
+
+.article-info .has-large-font-size {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.article-info ul li:before {
+    top: 12px;
+    content: " ";
+    width: 6px;
+    height: 6px;
+    background: #181818;
+    position: absolute;
+    display: block;
+    left: 15px;
+}
+
+.article-info ul li {
+    margin-bottom: 20px;
+    padding-left: 40px;
+    position: relative;
+}
+
+.article-info .wp-block-list {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.article-info .wp-block-image {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+/* Post (no featured image, author or date) */
+
+.noimage__noauthor_container {
+    padding: 30px 15px 25px 15px !important;
+}
+
+.noimage__noauthor_article {
+    padding-top: 110px !important;
+}
+
+/* Hide date in latest block */
+section#latest-block-block_dc70f1a19fe1900e4864ee5b7fb93e50 
+  .latest-item-info .latest-item-date {
+  display: none;
+}
+
+
+
+/* Hide date in category page landing */
+.latest.landing-articles .latest-item-date {
+    display: none !important;
+}

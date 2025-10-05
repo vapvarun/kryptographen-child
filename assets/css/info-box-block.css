@@ -1,0 +1,7 @@
+.info-box-content {
+    p{
+        background: linear-gradient(135deg, rgb(246, 246, 246) 0%, rgb(246, 246, 246) 99%);
+        padding: 38px;
+        border-radius: 12px;
+    }
+}

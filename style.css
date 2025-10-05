@@ -1,0 +1,108 @@
+/*
+Theme Name: Kryptographen Child
+Description: Kryptographen Child Theme
+Author: Kryptographen
+Template: kryptographen
+Version: 1.0.0
+*/
+
+/* Add your custom styles here */
+
+/*#mega-menu-wrap-main #mega-menu-main>li.mega-menu-item>a.mega-menu-link {*/
+/*    display: flex;*/
+/*    align-items: center;*/
+/*}*/
+#breadcrumbs-post span {
+    text-transform: uppercase;
+}
+
+#breadcrumbs-post span a {
+    text-transform: uppercase;
+}
+
+.hero__slider-item-date span.kgn-capitalize {
+    margin-right: 1rem;
+    text-transform: capitalize !important;
+}
+
+span.kgn-capitalize {
+    margin-right: 1rem;
+    text-transform: capitalize !important;
+}
+
+.breadcrumbs-green > span > span > a {
+    color: #35b782;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 13px;
+}
+
+.breadcrumbs-green > span > span:before {
+    content: "»";
+    margin: 0 10px 0 6px;
+    color: #35b782;
+    font-weight: 700;
+}
+
+.breadcrumbs-green > span > span:first-child:before {
+    content: "";
+    margin: 0;
+}
+
+.breadcrumbs-green > span > .breadcrumb_last {
+    display: none;
+}
+
+.breadcrumbs-green > span > .breadcrumb_last:before {
+    content: "";
+}
+
+.category-posts {
+    margin-top: 105px;
+}
+
+.token-info-block {
+    margin-bottom: 30px;
+    margin-top: 0;
+}
+
+.token-info-block__wrapper {
+    width: unset;
+}
+
+.token-info-block__footer > .btn-notice {
+    font-size: 10px !important;
+    padding-top: 8px;
+}
+
+.sticky-head {
+    position: sticky;
+    top: 83px;
+}
+
+.article-container {
+    width: 100% !important;
+    max-width: 895px !important;
+}
+
+.page-info {
+    padding-top: 15px !important;
+}
+
+@media screen and (max-width: 1030px) {
+    .sticky-head {
+        position: relative;
+    }
+
+    .token-info-block__wrapper {
+        width: 100%;
+    }
+
+    .article-block .guider-blocks-widget {
+        max-width: 100% !important;
+    }
+
+    .token-info-block {
+        margin-top: 30px;
+    }
+}
