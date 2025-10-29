@@ -146,3 +146,161 @@
         border-radius: 4px;
     }
 }
+
+
+
+
+
+
+
+
+
+
+.guider-blocks-flex {
+    display: inherit;
+    gap: 0;
+}
+
+.prom-block {
+    display: none;
+}
+
+.prom_image {
+    height: 100%;
+    margin: 0 auto;
+    width: 100%;
+    object-fit: contain;
+}
+
+.mobile-prom-block {
+    position: relative;
+    display: block;
+    max-width: 28em;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 2rem;
+    padding: 1em;
+    border: 1px solid #EDEDED;
+    border-radius: 8px;
+}
+
+.mobile-prom-block:hover,
+.mobile-prom-block:focus {
+    background-color: #fafafa;
+}
+
+.prom_image-block {
+    height: 10rem;
+    margin-bottom: 2.5em;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.mobile_prom_title{
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+    font-weight: 900;
+    line-height: 1.2;;
+    text-align: center;
+}
+
+.mobile_prom_content {
+    margin-bottom: 1em;
+    font-size: 1em;
+    font-weight: 400;
+    line-height: 1.8;
+}
+
+.abs_button {
+    text-align: center;
+    margin-bottom: 0.5em;
+    padding: 0.25em 0;
+    font-size: 1.25em;
+    font-weight: 700;
+    letter-spacing: 0.125rem;
+    background-color: #4e69ff;
+    opacity: 0.8;
+    border-radius: 12px;
+    color: white;
+}
+
+.abs_btn-notice {
+    font-size: 10px;
+    display: block;
+    margin: 10px 0 0;
+    text-align: center;
+}
+
+.mobile-prom-block a {
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+@media(min-width: 1030px) {
+    .guider-blocks-flex {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        max-width: 285px!important;
+        position: relative;
+    }
+
+    .prom-blocks {
+        position: sticky;
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        top: 15%;
+    }
+
+    .prom-block {
+        display: block;
+        width: 115%;
+        padding: 1rem;
+        border: 1px solid #ededed;
+        border-radius: 12px;
+    }
+
+    .mobile-prom-block {
+        display: none;
+    }
+
+    .prom-block:hover,
+    .prom-block:focus {
+        background-color: #fafafa;
+    }
+
+    .prom_title {
+        margin-bottom: 1rem;
+        font-size: 1.2rem;
+        font-weight: 900;
+        line-height: 1.2;
+        text-align: center;
+    }
+
+    .prom_content {
+        margin-bottom: 1em;
+        font-size: 1em;
+        font-weight: 400;
+        line-height: 1.8;
+    }
+
+    .prom-block a {
+        display: block;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 1;
+    }
+
+    .prom_image {
+        border-radius: 4px;
+    }
+}
