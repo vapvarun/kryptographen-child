@@ -30,7 +30,7 @@ if ( ! empty( $block[ 'align' ] ) ) {
 		<div class="latest-wrap">
 			<div class="section-header">
 				<div class="section-header-head">
-					<h2 class="section-header-title title"><?php echo esc_html( get_field( 'title' ) ); ?></h2>
+					<h2 class="section-header-title title"><?php the_field( 'title' ); ?></h2>
 				</div>
 			</div>
 
@@ -43,13 +43,13 @@ if ( ! empty( $block[ 'align' ] ) ) {
                         <?php if ( $counter > 2 ) break; ?>
 						<article class="latest-item">
 							<div class="latest-item-image">
-								<a href="<?php echo esc_url( get_permalink( $post_id ) ); ?>" rel="<?php echo is_front_page() ? 'dofollow' : 'nofollow'; ?>">
-									<?php echo get_the_post_thumbnail( $post_id, [ 400, 400 ] ); ?>
+								<a href="<?php the_permalink( $post_id ); ?>" rel="<?php echo is_front_page() ? 'dofollow' : 'nofollow'?>">
+									<?php echo get_the_post_thumbnail( $post_id, [ 400, 400 ] ) ?>
 								</a>
 							</div>
 							<div class="latest-item-caption">
 								<h4 class="latest-item-title">
-									<a href="<?php echo esc_url( get_permalink( $post_id ) ); ?>" rel="<?php echo is_front_page() ? 'dofollow' : 'nofollow'; ?>"><?php echo esc_html( get_the_title( $post_id ) ); ?></a>
+									<a href="<?php the_permalink( $post_id ); ?>" rel="<?php echo is_front_page() ? 'dofollow' : 'nofollow'?>"><?php echo get_the_title( $post_id ) ?></a>
 								</h4>
 							</div>
 						</article>

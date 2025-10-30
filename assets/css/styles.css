@@ -97,11 +97,18 @@
 /* Post (no featured image, author or date) */
 
 .noimage__noauthor_container {
+    display: flex;
+    justify-content: center;
     padding: 30px 15px 25px 15px !important;
 }
 
+.noimage__noauthor_container_text {
+    text-align: center;
+    width: 720px;
+}
+
 .noimage__noauthor_article {
-    padding-top: 110px !important;
+    padding-top: 100px !important;
 }
 
 /* Hide date in latest block */
@@ -115,4 +122,54 @@ section#latest-block-block_dc70f1a19fe1900e4864ee5b7fb93e50
 /* Hide date in category page landing */
 .latest.landing-articles .latest-item-date {
     display: none !important;
+}
+
+.hero__authordate {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
+
+.post_no_image_with_author {
+    flex-direction: column;
+}
+
+.post_no_image_with_author_socialicon {
+    margin-top: 25px;
+}
+
+.post_no_image_with_author_socialicon ul {
+    display: flex;
+    gap: 25px;
+    padding-left: 2px;
+}
+
+.post_no_image_with_author_info {
+    /* max-width: fit-content !important; */
+    margin: 0 auto;
+}
+
+.article-block .guider-blocks-text h3 {
+    margin-top: 35px;
+    margin-bottom: 35px !important;
+}
+
+.article-block .guider-blocks-text h2 {
+    margin-top: 35px !important;
+    margin-bottom: 35px !important;
+}
+
+@media ( max-width: 720px ) {
+    .post_no_image_with_author {
+        flex-direction: column !important;
+    }
+
+    .hero__slider-item-author {
+        margin-bottom: 0 !important;
+    }
+
+    .article-block .guider-blocks-text h2 {
+        margin-bottom: 20px !important;
+        margin-top: 20px !important;
+    }
 }

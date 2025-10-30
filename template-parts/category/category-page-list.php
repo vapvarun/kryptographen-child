@@ -4,7 +4,7 @@
 <section class="category-posts">
     <div class="container">
         <div class="category-posts__heading">
-            <h1><?php echo esc_html( single_cat_title( '', false ) ); ?></h1>
+            <h1><?php echo single_cat_title(); ?></h1>
         </div>
         <div class="category-posts-filters">
             <div class="category-posts-filters_view">
@@ -47,19 +47,19 @@
                 while ( have_posts() ) : the_post(); ?>
                     <article class="latest-item">
                         <div class="latest-item-image">
-                            <a href="<?php echo esc_url( get_permalink() ); ?>">
-                                <?php echo get_the_post_thumbnail( get_the_ID(), 'full' ); ?>
+                            <a href="<?php the_permalink() ?>">
+                                <?php echo get_the_post_thumbnail( get_the_ID(), 'full' ) ?>
                             </a>
                         </div>
                         <div class="latest-item-caption">
                             <h4 class="latest-item-title">
-                                <a href="<?php echo esc_url( get_permalink() ); ?>"><?php echo esc_html( get_the_title() ); ?></a>
+                                <a href="<?php the_permalink() ?>"><?php echo get_the_title(); ?></a>
                             </h4>
                             <div class="latest-item-info">
                                 <div class="latest-item-date">
-                                    <span><?php echo esc_html( get_the_date( 'd, M Y' ) ); ?></span>
+                                    <span><?php the_date( 'd, M Y' ) ?></span>
                                 </div>
-                                <div class="latest-item-category"><?php echo esc_html( single_cat_title( '', false ) ); ?></div>
+                                <div class="latest-item-category"><?php echo single_cat_title(); ?></div>
                             </div>
                         </div>
                     </article>
