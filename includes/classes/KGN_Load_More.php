@@ -16,13 +16,11 @@ if ( ! class_exists( 'KGN_Load_More' ) ) {
         {
             global $wp_query;
 
-            $theme_version = wp_get_theme()->get('Version');
-
             wp_enqueue_script(
                 'kgn_load_more',
                 get_stylesheet_directory_uri() . '/assets/js/kgn_load_more.js',
                 [],
-                $theme_version,
+                time(),
                 true
             );
 
