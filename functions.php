@@ -6,11 +6,17 @@ function enqueue_parent_styles() {
     wp_enqueue_style('child-style',
         get_stylesheet_directory_uri() . '/style.css',
         ['parent-style'],
-        wp_get_theme()->get('Version')
+        time()
     );
+    
 }
 
 add_action( 'wp_enqueue_scripts', 'enqueue_parent_styles' );
+
+add_filter('rocket_exclude_css', function($excluded) {
+    $excluded[] = '/assets/css/';
+    return $excluded;
+});
 
 require_once 'includes/modules/acf.php';
 require_once 'includes/classes/KGN_Thumbnails.php';
