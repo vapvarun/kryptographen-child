@@ -1,0 +1,248 @@
+/* Custom CSS - Previously in WordPress Additional CSS (wp-custom-css) */
+
+.radius15 {
+    border-radius: 15px!important;
+}
+
+.cfd-warning {
+    color: #A4A4A4!important;
+}
+
+.cfd-warning-plus500 {
+    color: #414141!important;
+    font-size: 13px!important;
+}
+
+.hero__slider-item-date span {
+    text-transform: lowercase!important;
+}
+
+.page-template-template-post .hero__slider-item-date {
+    display: none!important;
+}
+
+.page-template-template-post .hero__slider-item-header {
+    display: none!important;
+}
+
+.page-template-template-post .hero-post.white .container .hero__slider-item-author:after {
+    display: none!important;
+}
+
+p {
+    color: #000!important;
+    font-size: 17px!important;
+    line-height: 1.9!important;
+}
+
+li {
+    color: #000!important;
+    font-size: 17px!important;
+    line-height: 1.9!important;
+}
+
+@media (max-width: 1030px) {
+    .single-post .back-button {
+        position:relative;
+        top: 40px!important;
+    }
+
+    .single-guider .back-button {
+        position: relative;
+        top: 0px!important;
+    }
+}
+
+#mega-menu-wrap-main #mega-menu-main > li.mega-menu-item > a.mega-menu-link {
+    display: initial;
+}
+
+.post-13872 .post-image {
+    display: none!important;
+}
+
+@media (max-width: 1030px) {
+    .article-block .guider-blocks-widget {
+        margin-top: auto;
+        margin-bottom: 30px;
+    }
+
+    #ez-toc-container {
+        display: none;
+    }
+}
+
+.mobile-menu .dropdown > a span {
+    height: 25px;
+    width: 25px;
+    position: absolute;
+    z-index: 2;
+    right: -7px;
+    background: #ffefef;
+    opacity: 0;
+}
+
+@media(max-width: 500px) {
+    .postid-15055 .article-block .guider-blocks-wrapper {
+        flex-direction:column-reverse;
+    }
+
+    .postid-15055 .visible-lg.sticky-head {
+        position: unset!important;
+    }
+}
+
+#breadcrumbs-post span:nth-child(1) {
+    font-size: 15px;
+}
+
+#breadcrumbs-post span {
+    font-size: 13px;
+}
+
+.category-540 .hero-post_description p {
+    color: #fff!important;
+}
+
+.page-id-14767 .thumbnail-img:before {
+    content: 'Annonse';
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    background: #fff;
+    padding: 5px 10px;
+}
+
+.desc-white > p {
+    color: #fff !important;
+}
+
+.selectize-dropdown.single.mcw-conv-style {
+    margin-top: -146px;
+}
+
+.guider-blocks-text a {
+    text-decoration: underline;
+}
+
+.back-button {
+    display: none;
+}
+
+.article-block .guider-blocks-text a {
+    color: #00D084;
+    text-decoration: underline;
+}
+
+.article-block .guider-blocks-text img {
+    margin-bottom: 20px;
+}
+
+.green-link a {
+    color: #00D084;
+}
+
+.article-container {
+    width: 100% !important;
+    max-width: 895px !important;
+}
+
+.page-info {
+    padding-top: 15px !important;
+}
+
+.article-block .guider-blocks-text a {
+    text-decoration: none;
+    font-size: 17px;
+}
+
+.btn-primary {
+    background-color: #0084FF;
+}
+
+@media screen and (max-width: 560px) {
+    .token-info-block__price {
+        letter-spacing: 0.9px;
+    }
+
+    .guider-blocks-text .has-text-align-center a {
+        font-size: 12px !important;
+    }
+
+    .actext a {
+        font-size: 12px !important;
+    }
+
+    .article-block .guider-blocks-text p {
+        margin-bottom: 25px !important;
+    }
+}
+
+#toggleButton {
+    font-size: 13.3px;
+}
+
+.guider-blocks-text .has-text-align-center a {
+    font-size: 12px !important;
+}
+
+.nichetable__content-after .acontent__label .actext a {
+    font-size: 12px;
+}
+
+.faq .faq-block {
+    max-width: 100%;
+    padding: 17px 17px 0;
+}
+
+.faq .faq-wrapper {
+    flex-direction: column;
+}
+
+.faq-block h3 {
+    font-size: 18px !important;
+}
+
+.faq-block p {
+    font-size: 16.5px !important;
+    padding-top: 15px;
+}
+
+.faq.block-faq-block .container {
+    padding: 0px !important;
+}
+
+.article-block .guider-blocks-text p {
+    margin-bottom: 10px;
+}
+
+.faq-block.landing-faq__block h3 {
+    margin-bottom: 0px !important;
+}
+
+.faq-block.landing-faq__block {
+    padding: 15px 15px 10px !important;
+}
+
+.faq-block.landing-faq__block p {
+    padding-top: 5px !important;
+}
+
+#latest-block-block_dc70f1a19fe1900e4864ee5b7fb93e50 .latest-wrap .latest-item-date {
+    display: none !important;
+}
+
+body.category-meglere .latest-item-date {
+    display: none !important;
+}
+
+body.category-betale .latest-item-date {
+    display: none !important;
+}
+
+@media ( max-width: 720px ) {
+    .article-block .guider-blocks-text h2 {
+        margin-bottom: 20px !important;
+        margin-top: 20px !important;
+    }
+}

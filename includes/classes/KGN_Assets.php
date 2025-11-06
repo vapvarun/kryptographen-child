@@ -76,6 +76,13 @@ if ( ! class_exists( 'KGN_Assets' ) ) {
                 $this->get_file_version('/assets/css/load-more.css')
             );
 
+            wp_enqueue_style(
+                'kgn_custom_style',
+                get_stylesheet_directory_uri() . '/assets/css/custom.css',
+                [],
+                $this->get_file_version('/assets/css/custom.css')
+            );
+
             // Enqueue all JavaScript files
             wp_enqueue_script(
                 'kgn_responsive_block',
