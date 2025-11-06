@@ -6,6 +6,21 @@ class KGF_ACF {
         add_action( 'acf/init', [ $this, 'register_acf_blocks' ] );
     }
 
+    /**
+     * Get file version based on modification time
+     */
+    private function get_file_version($file_path)
+    {
+        $full_path = get_stylesheet_directory() . $file_path;
+
+        if (file_exists($full_path)) {
+            return filemtime($full_path);
+        }
+
+        $theme_version = wp_get_theme()->get('Version');
+        return $theme_version ? $theme_version : '2.0.0';
+    }
+
     public function register_acf_blocks () {
 
         /**
@@ -31,16 +46,16 @@ class KGF_ACF {
             'title'          => __( 'Table of contents', 'cv' ),
             'description'    => __( 'Table of contents', 'cv' ),
             'category'       => 'sections',
-            'enqueue_style'  => get_stylesheet_directory_uri() . '/assets/css/table-of-contents-block.css',
-            'enqueue_script' => get_stylesheet_directory_uri() . '/assets/js/table-of-contents-block.js',
             'supports'       => [
                 'align'  => false,
                 'anchor' => true,
             ],
             'mode'           => 'auto',
             'enqueue_assets' => function() {
-                wp_enqueue_style( 'add-contents-block-style', get_stylesheet_directory_uri() . '/assets/css/add-contents.css', [], time() );
-                 },
+                $version = $this->get_file_version('/assets/css/table-of-contents-block.css');
+                wp_enqueue_style( 'table-of-contents-block-style', get_stylesheet_directory_uri() . '/assets/css/table-of-contents-block.css', [], $version );
+                wp_enqueue_style( 'add-contents-block-style', get_stylesheet_directory_uri() . '/assets/css/add-contents.css', [], $this->get_file_version('/assets/css/add-contents.css') );
+            },
         ] );
 
         acf_register_block_type( [
@@ -53,9 +68,6 @@ class KGF_ACF {
                 'anchor' => true,
             ],
             'mode'           => 'auto',
-            'enqueue_assets' => function() {
-                wp_enqueue_style( 'advertisement-block-style', get_stylesheet_directory_uri() . '/assets/css/advertisement-block.css', [], time() );
-            },
         ] );
 
         acf_register_block_type( [
@@ -69,12 +81,11 @@ class KGF_ACF {
             ],
             'mode'           => 'auto',
             'enqueue_assets' => function() {
-                wp_enqueue_style( 'info-block-style', get_stylesheet_directory_uri() . '/assets/css/info-box-block.css', [], time() );
+                $version = $this->get_file_version('/assets/css/info-box-block.css');
+                wp_enqueue_style( 'info-block-style', get_stylesheet_directory_uri() . '/assets/css/info-box-block.css', [], $version );
             },
         ] );
     }
 }
 
 new KGF_ACF();
-
-//wp_enqueue_style( 'font-awesome', 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css', [], '5.15.4' );
