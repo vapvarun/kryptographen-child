@@ -31,38 +31,16 @@ class KGF_ACF {
             'title'          => __( 'Table of contents', 'cv' ),
             'description'    => __( 'Table of contents', 'cv' ),
             'category'       => 'sections',
+            'enqueue_style'  => get_stylesheet_directory_uri() . '/assets/css/table-of-contents-block.css',
+            'enqueue_script' => get_stylesheet_directory_uri() . '/assets/js/table-of-contents-block.js',
             'supports'       => [
                 'align'  => false,
                 'anchor' => true,
             ],
             'mode'           => 'auto',
             'enqueue_assets' => function() {
-                $theme_version = wp_get_theme()->get('Version');
-
-                // Only load scripts on frontend, not in editor
-                if (!is_admin() && !wp_is_json_request()) {
-                    wp_enqueue_script(
-                        'table-of-contents-block-js',
-                        get_stylesheet_directory_uri() . '/assets/js/table-of-contents-block.js',
-                        [],
-                        $theme_version,
-                        true
-                    );
-                }
-                // Styles can be loaded in both contexts
-                wp_enqueue_style(
-                    'table-of-contents-block-style',
-                    get_stylesheet_directory_uri() . '/assets/css/table-of-contents-block.css',
-                    [],
-                    $theme_version
-                );
-                wp_enqueue_style(
-                    'add-contents-block-style',
-                    get_stylesheet_directory_uri() . '/assets/css/add-contents.css',
-                    [],
-                    $theme_version
-                );
-            },
+                wp_enqueue_style( 'add-contents-block-style', get_stylesheet_directory_uri() . '/assets/css/add-contents.css', [], time() );
+                 },
         ] );
 
         acf_register_block_type( [
@@ -76,13 +54,7 @@ class KGF_ACF {
             ],
             'mode'           => 'auto',
             'enqueue_assets' => function() {
-                $theme_version = wp_get_theme()->get('Version');
-                wp_enqueue_style(
-                    'advertisement-block-style',
-                    get_stylesheet_directory_uri() . '/assets/css/advertisement-block.css',
-                    [],
-                    $theme_version
-                );
+                wp_enqueue_style( 'advertisement-block-style', get_stylesheet_directory_uri() . '/assets/css/advertisement-block.css', [], time() );
             },
         ] );
 
@@ -97,13 +69,7 @@ class KGF_ACF {
             ],
             'mode'           => 'auto',
             'enqueue_assets' => function() {
-                $theme_version = wp_get_theme()->get('Version');
-                wp_enqueue_style(
-                    'info-block-style',
-                    get_stylesheet_directory_uri() . '/assets/css/info-box-block.css',
-                    [],
-                    $theme_version
-                );
+                wp_enqueue_style( 'info-block-style', get_stylesheet_directory_uri() . '/assets/css/info-box-block.css', [], time() );
             },
         ] );
     }

@@ -11,26 +11,19 @@ if ( $posts ) :
         <?php $page_posts_ids[] = $post->ID; ?>
         <article class="latest-item">
             <div class="latest-item-image">
-                <a href="<?php echo esc_url( get_permalink( $post ) ); ?>">
+                <a href="<?php echo get_permalink( $post ) ?>">
                     <?php echo get_the_post_thumbnail($post->ID, 'full'); ?>
                 </a>
             </div>
             <div class="latest-item-caption">
                 <h4 class="latest-item-title">
-                    <a href="<?php echo esc_url( get_permalink( $post ) ); ?>"><?php echo esc_html( $post->post_title ); ?></a>
+                    <a href="<?php echo get_permalink( $post ) ?>"><?php echo $post->post_title; ?></a>
                 </h4>
                 <div class="latest-item-info">
                     <div class="latest-item-date">
-                        <span><?php echo esc_html( get_the_date('d, M Y', $post->ID ) ); ?></span>
+                        <span><?php echo get_the_date('d, M Y', $post->ID ); ?></span>
                     </div>
-                    <div class="latest-item-category">
-                        <?php
-                        $categories = get_the_category($post->ID);
-                        if ( ! empty( $categories ) ) {
-                            echo esc_html( $categories[0]->name );
-                        }
-                        ?>
-                    </div>
+                    <div class="latest-item-category"><?php echo get_the_category($post->ID)[0]->name; ?></div>
                 </div>
             </div>
         </article>
